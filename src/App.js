@@ -7,7 +7,7 @@ function App() {
   return (
     <>
     <Navbar title="textUtils" about="about" />
-    <FormInput/>
+    <FormInput heading="Enter your text below"/>
     </>
   );
 }
