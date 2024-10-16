@@ -45,22 +45,22 @@ export default function FormInput(props) {
                     value={text}
                     onChange={handleOnChange}
                 ></textarea>
-                <button type="button" htmlFor="textarea" className="btn btn-success mt-3" onClick={handleUpperCase}>Convert to UpperCase</button>
-                <button type="button" htmlFor="textarea" className="btn btn-success mt-3 mx-3" onClick={handleLowerCase}>Convert to LowerCase</button>
-                <button type="button" htmlFor="textarea" className="btn btn-success mt-3" onClick={handleClearCase}>Clear Text</button>
-                <button type="button" htmlFor="textarea" className="btn btn-success mt-3 mx-3" onClick={handleCopyText}>Copy Text</button>
+                <button type="button" htmlFor="textarea" disabled={text.length===0} className="btn btn-success mt-3 mx-2" onClick={handleLowerCase}>Convert to LowerCase</button>
+                <button type="button" htmlFor="textarea" disabled={text.length===0} className="btn btn-success mt-3 mx-2" onClick={handleUpperCase}>Convert to UpperCase</button>
+                <button type="button" htmlFor="textarea" disabled={text.length===0} className="btn btn-success mt-3 mx-2" onClick={handleClearCase}>Clear Text</button>
+                <button type="button" htmlFor="textarea" disabled={text.length===0} className="btn btn-success mt-3 mx-2" onClick={handleCopyText}>Copy Text</button>
             </div>
 
 
             <div className={`mt-5 text-${props.mode === 'dark'?'light':'dark'}`}>
                 <h3>Text Summery</h3>
-                <p>{text.split(" ").length} words and {text.length} characters</p>
-                <p>You can read this in {text.split(" ").length * 0.08} minutes.</p>
+                <p>{text.split(" ").filter((element) => {return element.length!==0}).length} words and {text.length} characters</p>
+                <p>You can read this in {text.split(" ").filter((element) => {return element.length!==0}).length * 0.08} minutes.</p>
             </div>
 
             <div className={`mt-5 text-${props.mode === 'dark'?'light':'dark'}`}>
                 <h3>Preview</h3>
-                <p>{text.length>0 ? text : "Enter something to preview it here !"}</p>
+                <p>{text.length>0 ? text : "Nothing to preview !"}</p>
             </div>
 
         </div>
