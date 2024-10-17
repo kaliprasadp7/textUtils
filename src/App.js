@@ -52,7 +52,7 @@ function App() {
         <Alert alert={alert} />
         <Routes>
           <Route path="/about" element={<About mode={mode} />} />
-          <Route path="/" element={<FormInput showAlert={showAlert} heading="Enter your text below" mode={mode} toggleMode={toggleMode} />} />
+          <Route path="/" element={<FormInput showAlert={showAlert} heading="Try TextUtils - Word Counter, Character Counter, Remove Extra Spaces" mode={mode} toggleMode={toggleMode} />} />
         </Routes>
       </Router>
     </>

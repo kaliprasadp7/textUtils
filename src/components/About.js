@@ -3,10 +3,11 @@ import React from "react";
 function About(props) {
     let myStyle = {
         color : props.mode === 'dark' ? 'white' : '#042743',
-        backgroundColor : props.mode === 'dark' ? 'rgb(33 37 41)' : 'white',
+        backgroundColor : props.mode === 'dark' ? 'rgb(11 11 33)' : 'white',
     }
   return (
     <div className="container mt-5">
+        <h1 style={{color : props.mode === 'dark' ? 'white' : '#042743'}}>About TextUtils</h1>
       <div className="accordion" id="accordionExample">
         <div className="accordion-item">
           <h2 className="accordion-header">
