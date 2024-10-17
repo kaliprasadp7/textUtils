@@ -1,6 +1,5 @@
 // import logo from './logo.svg';
 import React, { useState } from 'react';
-import './App.css';
 import FormInput from './components/FormInput';
 import Navbar from './components/Navbar';
 import Alert from './components/Alert';
